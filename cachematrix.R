@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Matrix inversion is usually a costly process. These functions
+## create a special matrix object that can cache the inverse 
+## once it is calculated for the first time.
 
-## Write a short comment describing this function
+## This creates a special matrix object that caches the matrix
+## itself and its inverse as well
 
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
@@ -18,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function gets the inverse of the given matrix from the
+## cache if it alredy exists. Else, it calculates the inverse
+## and sets it to the cache
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
